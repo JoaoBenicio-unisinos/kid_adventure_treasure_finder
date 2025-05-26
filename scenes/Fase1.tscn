@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=4 uid="uid://booresybequgc"]
+[gd_scene load_steps=21 format=4 uid="uid://booresybequgc"]
 
 [ext_resource type="Texture2D" uid="uid://urhusbgg51kt" path="res://assets/Background/BG1.png" id="1_i2mi1"]
 [ext_resource type="PackedScene" uid="uid://3rf8nuqlw4do" path="res://scenes/player.tscn" id="1_vlm2j"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://c3c0ryslmbtt" path="res://assets/Objetos/willow 3.png" id="6_2fo7l"]
 [ext_resource type="Texture2D" uid="uid://ccbl00pi5nil3" path="res://assets/Tilesets/TX Tileset Ground.png" id="7_opofi"]
 [ext_resource type="PackedScene" uid="uid://cc4usfvbjx8ow" path="res://scenes/limite mundo.tscn" id="9_opofi"]
+[ext_resource type="PackedScene" uid="uid://bhhy8v76erxj4" path="res://scenes/Coin.tscn" id="10_847xx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_j7s8k"]
 texture = ExtResource("1_i2mi1")
@@ -1200,10 +1201,11 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAJAAMAAAABAAAAAAAJAAMAAAACAAAAAAAIAAM
 tile_set = SubResource("TileSet_2fo7l")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_vlm2j")]
-position = Vector2(-14, 42)
+position = Vector2(-14, -4)
+collision_layer = 2
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(-7, -109)
+position = Vector2(1, -68)
 zoom = Vector2(4, 4)
 
 [node name="Limite fim" parent="." instance=ExtResource("9_opofi")]
@@ -1213,3 +1215,7 @@ rotation = -1.55102
 [node name="Limite início" parent="." instance=ExtResource("9_opofi")]
 position = Vector2(-725, -76)
 rotation = 1.59468
+
+[node name="Moeda 1" parent="." instance=ExtResource("10_847xx")]
+position = Vector2(19, -17)
+collision_mask = 2
