@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cn4kuxngsu5yf"]
 
-[ext_resource type="Texture2D" uid="uid://c5gdgm734uiik" path="res://assets/Tilesets/tileset_snow.png" id="1_blxbr"]
+[ext_resource type="Texture2D" uid="uid://diaxvkpvmnii7" path="res://assets/Tilesets/tileset_dirt.png" id="1_blxbr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l77d7"]
 size = Vector2(24, 6)
@@ -12,7 +12,7 @@ position = Vector2(13, 4)
 scale = Vector2(0.48, 0.5)
 texture = ExtResource("1_blxbr")
 region_enabled = true
-region_rect = Rect2(110.5, 47.5, 50, 16)
+region_rect = Rect2(128, 47.5, 49, 15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 physics_interpolation_mode = 1
