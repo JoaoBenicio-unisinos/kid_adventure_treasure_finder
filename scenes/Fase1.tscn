@@ -1267,6 +1267,7 @@ _data = {
 }
 
 [node name="Fase1" type="Node2D"]
+position = Vector2(-1, 0)
 
 [node name="Céu" type="TileMapLayer" parent="."]
 position = Vector2(-12, 0)
