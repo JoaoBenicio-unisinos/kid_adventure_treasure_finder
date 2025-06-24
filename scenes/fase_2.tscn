@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://bojd1bnsje8tl"]
+[gd_scene load_steps=37 format=4 uid="uid://bojd1bnsje8tl"]
 
 [ext_resource type="Texture2D" uid="uid://cglw6kcjm3p8j" path="res://assets/Background/orig_big.png" id="1_y30lw"]
 [ext_resource type="Texture2D" uid="uid://ly0aq0d38bhf" path="res://assets/Background/background 1/3.png" id="2_ch500"]
@@ -11,11 +11,12 @@
 [ext_resource type="Texture2D" uid="uid://crxr02q43xsst" path="res://assets/Background/background 3/Plan 2.png" id="9_e2srl"]
 [ext_resource type="Texture2D" uid="uid://c5gdgm734uiik" path="res://assets/Tilesets/tileset_snow.png" id="10_13edb"]
 [ext_resource type="PackedScene" uid="uid://3rf8nuqlw4do" path="res://scenes/player.tscn" id="11_0o8to"]
-[ext_resource type="PackedScene" uid="uid://0pa1n7fb5dxe" path="res://Plataforma fase 2 gelo.tscn" id="13_s1htv"]
+[ext_resource type="PackedScene" uid="uid://0pa1n7fb5dxe" path="res://scenes/Plataforma fase 2 gelo.tscn" id="13_s1htv"]
 [ext_resource type="PackedScene" uid="uid://cc4usfvbjx8ow" path="res://scenes/limite mundo.tscn" id="14_8e7y0"]
-[ext_resource type="PackedScene" uid="uid://clk5p0lcsmtal" path="res://plataforma_pequenafase4.tscn" id="14_oax5d"]
+[ext_resource type="PackedScene" uid="uid://clk5p0lcsmtal" path="res://scenes/plataforma_pequenafase4.tscn" id="14_oax5d"]
 [ext_resource type="PackedScene" uid="uid://bhhy8v76erxj4" path="res://scenes/Coin.tscn" id="15_4y4ae"]
 [ext_resource type="PackedScene" uid="uid://bswqnskpca5qm" path="res://scenes/baú.tscn" id="16_oywbf"]
+[ext_resource type="PackedScene" uid="uid://d0bq7acjirwv7" path="res://scenes/plataforma neve.tscn" id="17_oywbf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jktqw"]
 texture = ExtResource("1_y30lw")
@@ -26386,7 +26387,6 @@ texture = ExtResource("10_13edb")
 1:3/0 = 0
 2:3/0 = 0
 3:3/0 = 0
-3:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:3/0 = 0
 5:3/0 = 0
 7:3/0 = 0
@@ -26404,10 +26404,13 @@ texture = ExtResource("10_13edb")
 5:1/0 = 0
 2:0/0 = 0
 2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 3:0/0 = 0
 3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 4:0/0 = 0
 4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_2ix5h"]
 physics_layer_0/collision_layer = 1
@@ -26440,11 +26443,10 @@ tile_map_data = PackedByteArray("AAAAACIAAQAJAAIAAAAAACMAAQACAAEAAAABACIAAQADAAA
 tile_set = SubResource("TileSet_2ix5h")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("11_0o8to")]
-position = Vector2(272, 364)
-safe_margin = 17.127
+position = Vector2(228, 557)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
-position = Vector2(1, -11)
+position = Vector2(1, 0)
 zoom = Vector2(4, 4)
 
 [node name="Limites" type="Node" parent="."]
@@ -26463,10 +26465,10 @@ rotation = -1.55102
 position = Vector2(598, 652)
 
 [node name="AnimatableBody2D" parent="Node" instance=ExtResource("13_s1htv")]
-position = Vector2(135, 521)
+position = Vector2(149, 516)
 
 [node name="AnimatableBody2D2" parent="Node" instance=ExtResource("13_s1htv")]
-position = Vector2(137, 449)
+position = Vector2(121, 416)
 
 [node name="AnimatableBody2D3" parent="Node" instance=ExtResource("13_s1htv")]
 position = Vector2(73, 483)
@@ -26543,3 +26545,6 @@ position = Vector2(128, 255)
 
 [node name="Baú" parent="Node" instance=ExtResource("16_oywbf")]
 position = Vector2(1024, 403)
+
+[node name="AnimatableBody2D15" parent="Node" instance=ExtResource("17_oywbf")]
+position = Vector2(340, 519)

@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://c5gdgm734uiik" path="res://assets/Tilesets/tileset_snow.png" id="1_ntf6s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ntf6s"]
-size = Vector2(17, 47)
+size = Vector2(13, 42)
 
 [node name="AnimatableBody2D" type="AnimatableBody2D"]
 
@@ -15,7 +15,7 @@ region_enabled = true
 region_rect = Rect2(110.941, 47.8403, 49.0691, 15.2943)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-physics_interpolation_mode = 1
-position = Vector2(0.5, 0.5)
+physics_interpolation_mode = 2
+position = Vector2(0, -2.98023e-08)
 rotation = 1.5708
 shape = SubResource("RectangleShape2D_ntf6s")

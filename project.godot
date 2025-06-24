@@ -11,9 +11,8 @@ config_version=5
 [application]
 
 config/name="Kid Adventure Treasure Finder"
-run/main_scene="uid://bbh55amkro5cf"
+run/main_scene="uid://bojd1bnsje8tl"
 config/features=PackedStringArray("4.4", "GL Compatibility")
-config/icon="res://icon.svg"
 
 [input]
 
