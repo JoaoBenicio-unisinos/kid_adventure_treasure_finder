@@ -8,8 +8,8 @@ size = Vector2(13, 42)
 [node name="AnimatableBody2D" type="AnimatableBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(-5.72205e-06, 4.76837e-07)
-scale = Vector2(0.989796, 1.1)
+position = Vector2(0.499999, -0.5)
+scale = Vector2(0.836735, 0.733333)
 texture = ExtResource("1_ntf6s")
 region_enabled = true
 region_rect = Rect2(110.941, 47.8403, 49.0691, 15.2943)
