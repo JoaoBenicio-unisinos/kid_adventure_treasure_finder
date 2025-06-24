@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://bojd1bnsje8tl"]
+[gd_scene load_steps=36 format=4 uid="uid://bojd1bnsje8tl"]
 
 [ext_resource type="Texture2D" uid="uid://cglw6kcjm3p8j" path="res://assets/Background/orig_big.png" id="1_y30lw"]
 [ext_resource type="Texture2D" uid="uid://ly0aq0d38bhf" path="res://assets/Background/background 1/3.png" id="2_ch500"]
@@ -11,7 +11,11 @@
 [ext_resource type="Texture2D" uid="uid://crxr02q43xsst" path="res://assets/Background/background 3/Plan 2.png" id="9_e2srl"]
 [ext_resource type="Texture2D" uid="uid://c5gdgm734uiik" path="res://assets/Tilesets/tileset_snow.png" id="10_13edb"]
 [ext_resource type="PackedScene" uid="uid://3rf8nuqlw4do" path="res://scenes/player.tscn" id="11_0o8to"]
+[ext_resource type="PackedScene" uid="uid://0pa1n7fb5dxe" path="res://Plataforma fase 2 gelo.tscn" id="13_s1htv"]
 [ext_resource type="PackedScene" uid="uid://cc4usfvbjx8ow" path="res://scenes/limite mundo.tscn" id="14_8e7y0"]
+[ext_resource type="PackedScene" uid="uid://clk5p0lcsmtal" path="res://plataforma_pequenafase4.tscn" id="14_oax5d"]
+[ext_resource type="PackedScene" uid="uid://bhhy8v76erxj4" path="res://scenes/Coin.tscn" id="15_4y4ae"]
+[ext_resource type="PackedScene" uid="uid://bswqnskpca5qm" path="res://scenes/baú.tscn" id="16_oywbf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jktqw"]
 texture = ExtResource("1_y30lw")
@@ -25111,6 +25115,40 @@ texture = ExtResource("5_odyx2")
 [sub_resource type="TileSet" id="TileSet_uqp2r"]
 sources/0 = SubResource("TileSetAtlasSource_gtxdf")
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oax5d"]
+texture = ExtResource("10_13edb")
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+5:1/0 = 0
+7:1/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+5:2/0 = 0
+9:2/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+4:3/0 = 0
+5:3/0 = 0
+7:3/0 = 0
+8:3/0 = 0
+9:3/0 = 0
+1:4/0 = 0
+2:4/0 = 0
+3:4/0 = 0
+4:4/0 = 0
+5:4/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+10:5/0 = 0
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_crige"]
 texture = ExtResource("6_8e7y0")
 16:0/0 = 0
@@ -25714,6 +25752,7 @@ texture = ExtResource("6_8e7y0")
 
 [sub_resource type="TileSet" id="TileSet_5ikrp"]
 sources/2 = SubResource("TileSetAtlasSource_crige")
+sources/0 = SubResource("TileSetAtlasSource_oax5d")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xkukq"]
 texture = ExtResource("7_wtq6f")
@@ -26401,7 +26440,7 @@ tile_map_data = PackedByteArray("AAAAACIAAQAJAAIAAAAAACMAAQACAAEAAAABACIAAQADAAA
 tile_set = SubResource("TileSet_2ix5h")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("11_0o8to")]
-position = Vector2(149, 459)
+position = Vector2(272, 364)
 safe_margin = 17.127
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
@@ -26417,3 +26456,90 @@ rotation = 1.59468
 [node name="Limite fim" parent="Limites" instance=ExtResource("14_8e7y0")]
 position = Vector2(1086, 527)
 rotation = -1.55102
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Plataforma pequena4" parent="Node" instance=ExtResource("14_oax5d")]
+position = Vector2(598, 652)
+
+[node name="AnimatableBody2D" parent="Node" instance=ExtResource("13_s1htv")]
+position = Vector2(135, 521)
+
+[node name="AnimatableBody2D2" parent="Node" instance=ExtResource("13_s1htv")]
+position = Vector2(137, 449)
+
+[node name="AnimatableBody2D3" parent="Node" instance=ExtResource("13_s1htv")]
+position = Vector2(73, 483)
+rotation = 1.5865
+
+[node name="Plataforma pequena" parent="Node" instance=ExtResource("14_oax5d")]
+position = Vector2(213, 423)
+
+[node name="Plataforma pequena2" parent="Node" instance=ExtResource("14_oax5d")]
+position = Vector2(272, 395)
+
+[node name="AnimatableBody2D4" parent="Node" instance=ExtResource("13_s1htv")]
+position = Vector2(350, 374)
+
+[node name="Plataforma pequena3" parent="Node" instance=ExtResource("14_oax5d")]
+position = Vector2(298, 329)
+
+[node name="AnimatableBody2D5" parent="Node" instance=ExtResource("13_s1htv")]
+position = Vector2(236, 297)
+
+[node name="Plataforma pequena5" parent="Node" instance=ExtResource("14_oax5d")]
+position = Vector2(181, 272)
+
+[node name="Plataforma pequena6" parent="Node" instance=ExtResource("14_oax5d")]
+position = Vector2(125, 316)
+
+[node name="AnimatableBody2D6" parent="Node" instance=ExtResource("13_s1htv")]
+position = Vector2(55, 299)
+
+[node name="AnimatableBody2D7" parent="Node" instance=ExtResource("13_s1htv")]
+position = Vector2(444, 413)
+
+[node name="Plataforma pequena7" parent="Node" instance=ExtResource("14_oax5d")]
+position = Vector2(510, 441)
+
+[node name="Plataforma pequena8" parent="Node" instance=ExtResource("14_oax5d")]
+position = Vector2(559, 469)
+
+[node name="AnimatableBody2D8" parent="Node" instance=ExtResource("13_s1htv")]
+position = Vector2(637, 441)
+
+[node name="AnimatableBody2D9" parent="Node" instance=ExtResource("13_s1htv")]
+position = Vector2(741, 409)
+
+[node name="AnimatableBody2D10" parent="Node" instance=ExtResource("13_s1htv")]
+position = Vector2(835, 359)
+
+[node name="AnimatableBody2D11" parent="Node" instance=ExtResource("13_s1htv")]
+position = Vector2(708, 326)
+
+[node name="Plataforma pequena9" parent="Node" instance=ExtResource("14_oax5d")]
+position = Vector2(773, 275)
+
+[node name="AnimatableBody2D12" parent="Node" instance=ExtResource("13_s1htv")]
+position = Vector2(855, 242)
+
+[node name="AnimatableBody2D13" parent="Node" instance=ExtResource("13_s1htv")]
+position = Vector2(953, 280)
+
+[node name="Plataforma pequena10" parent="Node" instance=ExtResource("14_oax5d")]
+position = Vector2(1039, 314)
+
+[node name="AnimatableBody2D14" parent="Node" instance=ExtResource("13_s1htv")]
+position = Vector2(1016, 409)
+
+[node name="Coin" parent="Node" instance=ExtResource("15_4y4ae")]
+position = Vector2(1047, 278)
+
+[node name="Coin2" parent="Node" instance=ExtResource("15_4y4ae")]
+position = Vector2(916, 182)
+
+[node name="Coin3" parent="Node" instance=ExtResource("15_4y4ae")]
+position = Vector2(128, 255)
+
+[node name="Baú" parent="Node" instance=ExtResource("16_oywbf")]
+position = Vector2(1024, 403)
