@@ -26442,7 +26442,7 @@ tile_map_data = PackedByteArray("AAAAACIAAQAJAAIAAAAAACMAAQACAAEAAAABACIAAQADAAA
 tile_set = SubResource("TileSet_2ix5h")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("11_0o8to")]
-position = Vector2(228, 557)
+position = Vector2(277, 370)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(1, 0)
@@ -26474,13 +26474,13 @@ rotation = 1.5865
 position = Vector2(213, 423)
 
 [node name="Plataforma pequena2" parent="Node" instance=ExtResource("14_oax5d")]
-position = Vector2(272, 395)
+position = Vector2(274, 402)
 
 [node name="AnimatableBody2D4" parent="Node" instance=ExtResource("13_s1htv")]
-position = Vector2(350, 374)
+position = Vector2(348, 369)
 
 [node name="Plataforma pequena3" parent="Node" instance=ExtResource("14_oax5d")]
-position = Vector2(298, 329)
+position = Vector2(287, 329)
 
 [node name="AnimatableBody2D5" parent="Node" instance=ExtResource("13_s1htv")]
 position = Vector2(236, 297)
@@ -26495,49 +26495,49 @@ position = Vector2(125, 316)
 position = Vector2(55, 299)
 
 [node name="AnimatableBody2D7" parent="Node" instance=ExtResource("13_s1htv")]
-position = Vector2(444, 413)
+position = Vector2(434, 413)
 
 [node name="Plataforma pequena7" parent="Node" instance=ExtResource("14_oax5d")]
-position = Vector2(510, 441)
+position = Vector2(504, 442)
 
 [node name="Plataforma pequena8" parent="Node" instance=ExtResource("14_oax5d")]
-position = Vector2(559, 469)
+position = Vector2(553, 471)
 
 [node name="AnimatableBody2D8" parent="Node" instance=ExtResource("13_s1htv")]
 position = Vector2(637, 441)
 
 [node name="AnimatableBody2D9" parent="Node" instance=ExtResource("13_s1htv")]
-position = Vector2(741, 409)
+position = Vector2(729, 411)
 
 [node name="AnimatableBody2D10" parent="Node" instance=ExtResource("13_s1htv")]
-position = Vector2(835, 359)
+position = Vector2(814, 375)
 
 [node name="AnimatableBody2D11" parent="Node" instance=ExtResource("13_s1htv")]
-position = Vector2(708, 326)
+position = Vector2(730, 349)
 
 [node name="Plataforma pequena9" parent="Node" instance=ExtResource("14_oax5d")]
-position = Vector2(773, 275)
+position = Vector2(789, 305)
 
 [node name="AnimatableBody2D12" parent="Node" instance=ExtResource("13_s1htv")]
-position = Vector2(855, 242)
+position = Vector2(847, 272)
 
 [node name="AnimatableBody2D13" parent="Node" instance=ExtResource("13_s1htv")]
-position = Vector2(953, 280)
+position = Vector2(930, 243)
 
 [node name="Plataforma pequena10" parent="Node" instance=ExtResource("14_oax5d")]
-position = Vector2(1039, 314)
+position = Vector2(1017, 317)
 
 [node name="AnimatableBody2D14" parent="Node" instance=ExtResource("13_s1htv")]
-position = Vector2(1016, 409)
+position = Vector2(986, 411)
 
 [node name="Coin" parent="Node" instance=ExtResource("15_4y4ae")]
-position = Vector2(1047, 278)
+position = Vector2(1013, 285)
 
 [node name="Coin2" parent="Node" instance=ExtResource("15_4y4ae")]
-position = Vector2(916, 182)
+position = Vector2(929, 192)
 
 [node name="Coin3" parent="Node" instance=ExtResource("15_4y4ae")]
 position = Vector2(128, 255)
 
 [node name="Baú" parent="Node" instance=ExtResource("16_oywbf")]
-position = Vector2(1020, 405)
+position = Vector2(991, 406)
