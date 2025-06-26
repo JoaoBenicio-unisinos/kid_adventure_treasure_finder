@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://bwnjukn56wnfi"]
+[gd_scene load_steps=35 format=4 uid="uid://bwnjukn56wnfi"]
 
 [ext_resource type="Texture2D" uid="uid://6pcfbl58iri3" path="res://assets/Background/Cave/0.png" id="1_mirrl"]
 [ext_resource type="Texture2D" uid="uid://bigaaavf8w8k2" path="res://assets/Background/Cave/7.png" id="2_m34lk"]
@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://crwkb6mnj1mov" path="res://scenes/Plataforma 3 fase 3.tscn" id="13_33hxd"]
 [ext_resource type="PackedScene" uid="uid://bswqnskpca5qm" path="res://scenes/baú.tscn" id="14_yqe7x"]
 [ext_resource type="PackedScene" uid="uid://s7ihme1t50do" path="res://scenes/Frog.tscn" id="15_qjtux"]
+[ext_resource type="PackedScene" uid="uid://bhhy8v76erxj4" path="res://scenes/Coin.tscn" id="16_sd4dp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6svqm"]
 texture = ExtResource("1_mirrl")
@@ -1810,3 +1811,12 @@ position = Vector2(537, 141)
 
 [node name="AnimatableBody2D20" parent="Node" instance=ExtResource("12_nhafq")]
 position = Vector2(419, 139)
+
+[node name="Coin" parent="Node" instance=ExtResource("16_sd4dp")]
+position = Vector2(371, 262)
+
+[node name="Coin2" parent="Node" instance=ExtResource("16_sd4dp")]
+position = Vector2(777, 261)
+
+[node name="Coin3" parent="Node" instance=ExtResource("16_sd4dp")]
+position = Vector2(935, 119)
