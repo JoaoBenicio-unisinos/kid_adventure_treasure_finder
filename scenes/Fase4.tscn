@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://dpl5idxdh85af"]
+[gd_scene load_steps=25 format=4 uid="uid://dpl5idxdh85af"]
 
 [ext_resource type="Texture2D" uid="uid://b8k7bttybb8gl" path="res://assets/Background/nature_4/1.png" id="1_jvdwq"]
 [ext_resource type="Texture2D" uid="uid://bsg2jrmrhslbj" path="res://assets/Background/nature_4/2.png" id="2_28ica"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://bmrbpefxnx14t" path="res://assets/Background/nature_4/3.png" id="4_dc014"]
 [ext_resource type="Texture2D" uid="uid://bu6ohs2jph0jr" path="res://assets/Background/nature_4/4.png" id="5_q61bs"]
 [ext_resource type="Texture2D" uid="uid://c42glyp7klbbw" path="res://assets/Tilesets/Tileset.png" id="6_msp3p"]
+[ext_resource type="PackedScene" uid="uid://s7ihme1t50do" path="res://scenes/Frog.tscn" id="11_28ica"]
 [ext_resource type="PackedScene" uid="uid://3rf8nuqlw4do" path="res://scenes/player.tscn" id="12_nckv8"]
 [ext_resource type="PackedScene" uid="uid://bhhy8v76erxj4" path="res://scenes/Coin.tscn" id="14_p0euo"]
 [ext_resource type="PackedScene" uid="uid://cn4kuxngsu5yf" path="res://scenes/Plataforma.tscn" id="15_0nh8a"]
@@ -2502,13 +2503,13 @@ zoom = Vector2(4, 4)
 [node name="Coletaveis" type="Node" parent="."]
 
 [node name="Coin" parent="Coletaveis" instance=ExtResource("14_p0euo")]
-position = Vector2(1, -271)
+position = Vector2(-316, -279)
 
 [node name="Coin2" parent="Coletaveis" instance=ExtResource("14_p0euo")]
-position = Vector2(-298, -214)
+position = Vector2(-114, -402)
 
 [node name="Coin 3" parent="Coletaveis" instance=ExtResource("14_p0euo")]
-position = Vector2(-194, -57)
+position = Vector2(-475, -93)
 
 [node name="Plataformas" type="Node" parent="."]
 
@@ -2643,6 +2644,9 @@ position = Vector2(255, -377)
 
 [node name="AnimatableBody2D45" parent="Plataformas" instance=ExtResource("15_0nh8a")]
 position = Vector2(-191, -371)
+
+[node name="Frog" parent="Plataformas" instance=ExtResource("11_28ica")]
+position = Vector2(-607, -421)
 
 [node name="Limites" type="Node" parent="."]
 
