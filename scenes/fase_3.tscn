@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=4 uid="uid://bwnjukn56wnfi"]
+[gd_scene load_steps=34 format=4 uid="uid://bwnjukn56wnfi"]
 
 [ext_resource type="Texture2D" uid="uid://6pcfbl58iri3" path="res://assets/Background/Cave/0.png" id="1_mirrl"]
 [ext_resource type="Texture2D" uid="uid://bigaaavf8w8k2" path="res://assets/Background/Cave/7.png" id="2_m34lk"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://br4nv4nihrmjk" path="res://Plataforma 2 fase 3.tscn" id="12_nhafq"]
 [ext_resource type="PackedScene" uid="uid://crwkb6mnj1mov" path="res://Plataforma 3 fase 3.tscn" id="13_33hxd"]
 [ext_resource type="PackedScene" uid="uid://bswqnskpca5qm" path="res://scenes/baú.tscn" id="14_yqe7x"]
+[ext_resource type="PackedScene" uid="uid://s7ihme1t50do" path="res://scenes/Frog.tscn" id="15_qjtux"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6svqm"]
 texture = ExtResource("1_mirrl")
@@ -1797,3 +1798,15 @@ position = Vector2(369, 295)
 
 [node name="Baú" parent="Node" instance=ExtResource("14_yqe7x")]
 position = Vector2(1093, 206)
+
+[node name="Frog" parent="Node" instance=ExtResource("15_qjtux")]
+position = Vector2(395, 119)
+
+[node name="AnimatableBody2D18" parent="Node" instance=ExtResource("12_nhafq")]
+position = Vector2(650, 159)
+
+[node name="AnimatableBody2D19" parent="Node" instance=ExtResource("12_nhafq")]
+position = Vector2(537, 141)
+
+[node name="AnimatableBody2D20" parent="Node" instance=ExtResource("12_nhafq")]
+position = Vector2(419, 139)

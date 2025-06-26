@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=4 uid="uid://dpl5idxdh85af"]
+[gd_scene load_steps=24 format=4 uid="uid://dpl5idxdh85af"]
 
 [ext_resource type="Texture2D" uid="uid://b8k7bttybb8gl" path="res://assets/Background/nature_4/1.png" id="1_jvdwq"]
 [ext_resource type="Texture2D" uid="uid://bsg2jrmrhslbj" path="res://assets/Background/nature_4/2.png" id="2_28ica"]
@@ -2468,83 +2468,6 @@ texture = ExtResource("6_msp3p")
 physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_ux4pk")
 
-[sub_resource type="Animation" id="Animation_48mec"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(78, -256)]
-}
-
-[sub_resource type="Animation" id="Animation_nk8g7"]
-resource_name = "mvoe"
-length = 2.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(229, -256), Vector2(78, -256)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ny51"]
-_data = {
-&"RESET": SubResource("Animation_48mec"),
-&"mvoe": SubResource("Animation_nk8g7")
-}
-
-[sub_resource type="Animation" id="Animation_326es"]
-length = 0.001
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(-495, -285)]
-}
-
-[sub_resource type="Animation" id="Animation_2oe0w"]
-resource_name = "move"
-length = 2.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(-495, -285), Vector2(-495, -405)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_w1tbj"]
-_data = {
-&"RESET": SubResource("Animation_326es"),
-&"move": SubResource("Animation_2oe0w")
-}
-
 [node name="Fase 4" type="Node2D"]
 
 [node name="ceu" type="TileMapLayer" parent="."]
@@ -2579,155 +2502,147 @@ zoom = Vector2(4, 4)
 [node name="Coletaveis" type="Node" parent="."]
 
 [node name="Coin" parent="Coletaveis" instance=ExtResource("14_p0euo")]
-visible = false
 position = Vector2(1, -271)
 
 [node name="Coin2" parent="Coletaveis" instance=ExtResource("14_p0euo")]
-visible = false
 position = Vector2(-298, -214)
 
 [node name="Coin 3" parent="Coletaveis" instance=ExtResource("14_p0euo")]
-visible = false
 position = Vector2(-194, -57)
 
 [node name="Plataformas" type="Node" parent="."]
 
 [node name="AnimatableBody2D30" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-332, -248)
 
 [node name="AnimatableBody2D29" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-310, -248)
 
 [node name="AnimatableBody2D" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-615, -43)
 
 [node name="AnimatableBody2D2" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-342, -124)
 
 [node name="AnimatableBody2D3" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-255, -157)
 
 [node name="AnimatableBody2D4" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-324, -124)
 
 [node name="AnimatableBody2D5" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-179, -224)
 
 [node name="AnimatableBody2D6" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-551, -58)
 
 [node name="AnimatableBody2D7" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-189, -114)
 
 [node name="AnimatableBody2D8" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-231, -157)
 
 [node name="AnimatableBody2D9" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-222, -244)
 
 [node name="AnimatableBody2D10" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-488, -72)
 
 [node name="AnimatableBody2D11" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-247, -244)
 
 [node name="AnimatableBody2D12" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-431, -87)
 
 [node name="AnimatableBody2D13" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-409, -87)
 
 [node name="AnimatableBody2D14" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-125, -97)
 
 [node name="AnimatableBody2D15" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-102, -97)
 
 [node name="AnimatableBody2D16" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-42, -121)
 
 [node name="AnimatableBody2D28" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-31, -187)
 
 [node name="AnimatableBody2D17" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(33, -151)
 
-[node name="AnimatableBody2D18" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
-position = Vector2(78, -256)
-rotation = -6.28319
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas/AnimatableBody2D18"]
-libraries = {
-&"": SubResource("AnimationLibrary_6ny51")
-}
-autoplay = "mvoe"
-
 [node name="AnimatableBody2D19" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-93, -216)
 
 [node name="AnimatableBody2D20" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-138, -245)
 
 [node name="AnimatableBody2D21" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(359, -320)
 
 [node name="AnimatableBody2D22" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(382, -320)
 
 [node name="AnimatableBody2D23" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(404, -320)
 
 [node name="Baú" parent="Plataformas" instance=ExtResource("16_6gmwj")]
-visible = false
 position = Vector2(412, -318)
 
-[node name="AnimatableBody2D24" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
-position = Vector2(-495, -285)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Plataformas/AnimatableBody2D24"]
-libraries = {
-&"": SubResource("AnimationLibrary_w1tbj")
-}
-autoplay = "move"
-
 [node name="AnimatableBody2D25" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
-position = Vector2(-425, -339)
+position = Vector2(-386, -258)
 
 [node name="AnimatableBody2D26" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-584, -408)
 
 [node name="AnimatableBody2D27" parent="Plataformas" instance=ExtResource("15_0nh8a")]
-visible = false
 position = Vector2(-607, -408)
+
+[node name="AnimatableBody2D31" parent="Plataformas" instance=ExtResource("15_0nh8a")]
+position = Vector2(-425, -291)
+
+[node name="AnimatableBody2D32" parent="Plataformas" instance=ExtResource("15_0nh8a")]
+position = Vector2(-369, -324)
+
+[node name="AnimatableBody2D33" parent="Plataformas" instance=ExtResource("15_0nh8a")]
+position = Vector2(-431, -356)
+
+[node name="AnimatableBody2D34" parent="Plataformas" instance=ExtResource("15_0nh8a")]
+position = Vector2(-490, -386)
+
+[node name="AnimatableBody2D35" parent="Plataformas" instance=ExtResource("15_0nh8a")]
+position = Vector2(-533, -423)
+
+[node name="AnimatableBody2D36" parent="Plataformas" instance=ExtResource("15_0nh8a")]
+position = Vector2(-311, -339)
+
+[node name="AnimatableBody2D37" parent="Plataformas" instance=ExtResource("15_0nh8a")]
+position = Vector2(-250, -355)
+
+[node name="AnimatableBody2D38" parent="Plataformas" instance=ExtResource("15_0nh8a")]
+position = Vector2(-128, -384)
+
+[node name="AnimatableBody2D39" parent="Plataformas" instance=ExtResource("15_0nh8a")]
+position = Vector2(-66, -396)
+
+[node name="AnimatableBody2D40" parent="Plataformas" instance=ExtResource("15_0nh8a")]
+position = Vector2(-9, -404)
+
+[node name="AnimatableBody2D41" parent="Plataformas" instance=ExtResource("15_0nh8a")]
+position = Vector2(59, -380)
+
+[node name="AnimatableBody2D42" parent="Plataformas" instance=ExtResource("15_0nh8a")]
+position = Vector2(121, -408)
+
+[node name="AnimatableBody2D43" parent="Plataformas" instance=ExtResource("15_0nh8a")]
+position = Vector2(182, -425)
+
+[node name="AnimatableBody2D44" parent="Plataformas" instance=ExtResource("15_0nh8a")]
+position = Vector2(255, -377)
+
+[node name="AnimatableBody2D45" parent="Plataformas" instance=ExtResource("15_0nh8a")]
+position = Vector2(-191, -371)
 
 [node name="Limites" type="Node" parent="."]
 

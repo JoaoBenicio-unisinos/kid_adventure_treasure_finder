@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://bojd1bnsje8tl"]
+[gd_scene load_steps=37 format=4 uid="uid://bojd1bnsje8tl"]
 
 [ext_resource type="Texture2D" uid="uid://cglw6kcjm3p8j" path="res://assets/Background/orig_big.png" id="1_y30lw"]
 [ext_resource type="Texture2D" uid="uid://ly0aq0d38bhf" path="res://assets/Background/background 1/3.png" id="2_ch500"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://clk5p0lcsmtal" path="res://scenes/plataforma_pequenafase4.tscn" id="14_oax5d"]
 [ext_resource type="PackedScene" uid="uid://bhhy8v76erxj4" path="res://scenes/Coin.tscn" id="15_4y4ae"]
 [ext_resource type="PackedScene" uid="uid://bswqnskpca5qm" path="res://scenes/baú.tscn" id="16_oywbf"]
+[ext_resource type="PackedScene" uid="uid://s7ihme1t50do" path="res://scenes/Frog.tscn" id="17_oywbf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jktqw"]
 texture = ExtResource("1_y30lw")
@@ -26541,3 +26542,6 @@ position = Vector2(128, 255)
 
 [node name="Baú" parent="Node" instance=ExtResource("16_oywbf")]
 position = Vector2(991, 406)
+
+[node name="Frog" parent="Node" instance=ExtResource("17_oywbf")]
+position = Vector2(35, 279)
