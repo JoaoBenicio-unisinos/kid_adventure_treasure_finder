@@ -10,9 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://cjfkei2764rv6" path="res://assets/Background/Cave/1.png" id="8_brcpy"]
 [ext_resource type="Texture2D" uid="uid://dxjj08h1q0ejn" path="res://assets/Tilesets/tileset_lava.png" id="9_0fekv"]
 [ext_resource type="PackedScene" uid="uid://3rf8nuqlw4do" path="res://scenes/player.tscn" id="10_pvjt8"]
-[ext_resource type="PackedScene" uid="uid://et6rvtrkhm1w" path="res://Plataforma fase 3.tscn" id="11_7s4rx"]
-[ext_resource type="PackedScene" uid="uid://br4nv4nihrmjk" path="res://Plataforma 2 fase 3.tscn" id="12_nhafq"]
-[ext_resource type="PackedScene" uid="uid://crwkb6mnj1mov" path="res://Plataforma 3 fase 3.tscn" id="13_33hxd"]
+[ext_resource type="PackedScene" uid="uid://et6rvtrkhm1w" path="res://scenes/Plataforma fase 3.tscn" id="11_7s4rx"]
+[ext_resource type="PackedScene" uid="uid://br4nv4nihrmjk" path="res://scenes/Plataforma 2 fase 3.tscn" id="12_nhafq"]
+[ext_resource type="PackedScene" uid="uid://crwkb6mnj1mov" path="res://scenes/Plataforma 3 fase 3.tscn" id="13_33hxd"]
 [ext_resource type="PackedScene" uid="uid://bswqnskpca5qm" path="res://scenes/baú.tscn" id="14_yqe7x"]
 [ext_resource type="PackedScene" uid="uid://s7ihme1t50do" path="res://scenes/Frog.tscn" id="15_qjtux"]
 
