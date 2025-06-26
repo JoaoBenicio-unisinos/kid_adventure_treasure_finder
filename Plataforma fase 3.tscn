@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://et6rvtrkhm1w"]
+
+[ext_resource type="Texture2D" uid="uid://dxjj08h1q0ejn" path="res://assets/Tilesets/tileset_lava.png" id="1_x6oej"]
+
+[sub_resource type="ConvexPolygonShape2D" id="ConvexPolygonShape2D_r736c"]
+points = PackedVector2Array(14, 34, -12, 34, -55, -13, 2, -13, 56, -13)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(20, 16)
+texture = ExtResource("1_x6oej")
+region_enabled = true
+region_rect = Rect2(110.133, 46.4219, 114.892, 50.8917)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(20, 5)
+shape = SubResource("ConvexPolygonShape2D_r736c")
