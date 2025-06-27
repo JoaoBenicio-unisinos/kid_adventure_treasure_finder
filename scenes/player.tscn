@@ -1,31 +1,44 @@
-[gd_scene load_steps=5 format=3 uid="uid://3rf8nuqlw4do"]
+[gd_scene load_steps=6 format=3 uid="uid://3rf8nuqlw4do"]
 
 [ext_resource type="Script" uid="uid://hrpremfqjrpv" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://cq2hox8eriujg" path="res://assets/Characters/moleque_perigo.png" id="2_g2els"]
+[ext_resource type="Texture2D" uid="uid://cq2hox8eriujg" path="res://assets/Characters/moleque_perigo.png" id="2_onrkg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3pqv"]
+atlas = ExtResource("2_onrkg")
+region = Rect2(0, 32, 64, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_g2els")
+"texture": SubResource("AtlasTexture_i3pqv")
 }],
 "loop": true,
 "name": &"Idle",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(6, 14)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8vuu"]
+radius = 4.0
+height = 20.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="kid" type="CharacterBody2D"]
 script = ExtResource("1_g2els")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -14)
-scale = Vector2(0.606238, 0.46547)
+[node name="personagem" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -12)
+scale = Vector2(0.787494, 0.638985)
 sprite_frames = SubResource("SpriteFrames_g2els")
 animation = &"Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -6)
-shape = SubResource("RectangleShape2D_g2els")
+position = Vector2(-1, -12)
+shape = SubResource("CapsuleShape2D_u8vuu")
+
+[node name="JumpBufferTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="CoyoteTime" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true

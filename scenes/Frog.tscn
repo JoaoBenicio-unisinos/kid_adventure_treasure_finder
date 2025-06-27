@@ -74,7 +74,7 @@ radius = 5.09902
 collision_mask = 2
 script = ExtResource("1_0tqiu")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="sprite" type="AnimatedSprite2D" parent="."]
 position = Vector2(10, 8)
 scale = Vector2(0.666667, 0.666667)
 sprite_frames = SubResource("SpriteFrames_y4e2s")
@@ -85,5 +85,8 @@ frame_progress = 1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(9, 9)
 shape = SubResource("CircleShape2D_yeema")
+
+[node name="ribbit" type="AudioStreamPlayer2D" parent="."]
+volume_db = 5.622
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
