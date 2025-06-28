@@ -1,10 +1,13 @@
-[gd_scene load_steps=12 format=3 uid="uid://bh03k52jkgde7"]
+[gd_scene load_steps=16 format=3 uid="uid://bh03k52jkgde7"]
 
 [ext_resource type="Script" uid="uid://d07joejv3y1sx" path="res://scripts/menu.gd" id="1_con2f"]
+[ext_resource type="Texture2D" uid="uid://urhusbgg51kt" path="res://assets/Background/BG1.png" id="2_g3eks"]
+[ext_resource type="Texture2D" uid="uid://c1qxybg43j2fm" path="res://assets/Characters/Kid/KidLogos.png" id="3_v86rl"]
+[ext_resource type="AudioStream" path="res://assets/Sounds/xDeviruchi - Title Theme .wav" id="4_mhnvy"]
+[ext_resource type="AudioStream" uid="uid://dxy64arumg7p3" path="res://assets/Efeitos/game-start-6104.mp3" id="5_4ytvr"]
+[ext_resource type="FontFile" uid="uid://c66m8eqhagoyw" path="res://assets/Fonts_UI/m6x11plus.ttf" id="6_i6lef"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vsb4k"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_v86rl"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_g3eks"]
 
@@ -39,29 +42,51 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_vsb4k")
 
 [node name="kidbau" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 530.0
-offset_top = 6.0
-offset_right = 1146.0
-offset_bottom = 661.0
+offset_left = 318.0
+offset_top = -3.0
+offset_right = 1159.0
+offset_bottom = 652.0
+texture = ExtResource("2_g3eks")
 expand_mode = 1
+metadata/_edit_lock_ = true
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2(-0.938494, 0)
-scale = Vector2(0.812301, 1)
+position = Vector2(56, 1)
+scale = Vector2(0.610205, 1)
+color = Color(0.80312, 0, 0.160837, 1)
+polygon = PackedVector2Array(-9.38, -16.317, 656.16, -15.317, 944.16, 670, 5, 674)
+
+[node name="Polygon2D3" type="Polygon2D" parent="."]
+position = Vector2(22, 1)
+scale = Vector2(0.610205, 1)
+color = Color(0, 0.027451, 0.901961, 1)
+polygon = PackedVector2Array(-9.38, -16.317, 656.16, -15.317, 944.16, 670, 5, 674)
+
+[node name="Polygon2D2" type="Polygon2D" parent="."]
+position = Vector2(-10.131, -3)
+scale = Vector2(0.610205, 1)
 color = Color(0.996078, 0.698039, 0, 1)
-polygon = PackedVector2Array(1, 2, 656, 0, 938, 647, -5, 648)
+polygon = PackedVector2Array(-9.38, -16.317, 656.16, -15.317, 944.16, 670, 5, 674)
+
+[node name="kidbau2" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 319.0
+offset_top = -1.0
+offset_right = 1160.0
+offset_bottom = 654.0
+expand_mode = 1
 
 [node name="logo" type="TextureRect" parent="."]
-visible = false
 layout_mode = 0
-offset_left = 26.0
-offset_top = 48.0
-offset_right = 502.0
-offset_bottom = 359.0
-texture = SubResource("CanvasTexture_v86rl")
+offset_left = 405.0
+offset_top = -96.0
+offset_right = 1216.0
+offset_bottom = 707.0
+texture = ExtResource("3_v86rl")
 expand_mode = 1
 
 [node name="BgMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_mhnvy")
 autoplay = true
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
@@ -72,12 +97,12 @@ anchors_preset = -1
 anchor_top = 0.484568
 anchor_right = 0.182292
 anchor_bottom = 1.0
-offset_left = 50.0
-offset_top = -133.0
-offset_right = 144.0
-offset_bottom = 3.0
-grow_vertical = 0
-theme_override_constants/separation = 6
+offset_left = 51.0
+offset_top = -67.0001
+offset_right = 145.0
+offset_bottom = -52.0
+grow_vertical = 2
+theme_override_constants/separation = 4
 alignment = 1
 
 [node name="start_button" type="Button" parent="VBoxContainer"]
@@ -86,7 +111,8 @@ size_flags_horizontal = 0
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(0.361732, 0.168818, 0.148966, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 70
+theme_override_fonts/font = ExtResource("6_i6lef")
+theme_override_font_sizes/font_size = 65
 theme_override_styles/focus = SubResource("StyleBoxEmpty_g3eks")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_v86rl")
 text = "Iniciar"
@@ -98,7 +124,8 @@ layout_mode = 2
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(0.361732, 0.168818, 0.148966, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 70
+theme_override_fonts/font = ExtResource("6_i6lef")
+theme_override_font_sizes/font_size = 65
 theme_override_styles/focus = SubResource("StyleBoxEmpty_13sgg")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_i6lef")
 text = "Opções"
@@ -110,7 +137,8 @@ layout_mode = 2
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(0.361732, 0.168818, 0.148966, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 70
+theme_override_fonts/font = ExtResource("6_i6lef")
+theme_override_font_sizes/font_size = 65
 theme_override_styles/focus = SubResource("StyleBoxEmpty_mhnvy")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_4ytvr")
 text = "Créditos"
@@ -122,7 +150,8 @@ layout_mode = 2
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(0.361732, 0.168818, 0.148966, 1)
 theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
-theme_override_font_sizes/font_size = 70
+theme_override_fonts/font = ExtResource("6_i6lef")
+theme_override_font_sizes/font_size = 65
 theme_override_styles/focus = SubResource("StyleBoxEmpty_70i5f")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_mj5lg")
 text = "Sair
@@ -131,6 +160,26 @@ flat = true
 alignment = 0
 
 [node name="SoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_4ytvr")
+
+[node name="Label" type="Label" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_left = 50.0
+offset_top = 63.0
+offset_right = 382.0
+offset_bottom = 261.0
+theme_override_colors/font_color = Color(0.994253, 0.99355, 0.861047, 1)
+theme_override_colors/font_shadow_color = Color(0.898276, 1.10701e-06, 9.62615e-07, 1)
+theme_override_constants/line_spacing = 0
+theme_override_constants/paragraph_spacing = 0
+theme_override_constants/shadow_offset_x = 5
+theme_override_fonts/font = ExtResource("6_i6lef")
+theme_override_font_sizes/font_size = 60
+text = "KID ADVENTURE:
+TREASURE 
+FINDER"
+metadata/_edit_group_ = true
 
 [connection signal="pressed" from="VBoxContainer/start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]

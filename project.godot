@@ -11,8 +11,12 @@ config_version=5
 [application]
 
 config/name="Kid Adventure Treasure Finder"
-run/main_scene="uid://dpl5idxdh85af"
+run/main_scene="uid://bh03k52jkgde7"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+
+[autoload]
+
+SceneTransition="*res://scenes/SceneTransition.tscn"
 
 [input]
 
