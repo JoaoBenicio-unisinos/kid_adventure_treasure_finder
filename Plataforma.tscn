@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn4kuxngsu5yf"]
+
+[ext_resource type="Texture2D" uid="uid://dnilrlgetlgqv" path="res://assets/Tilesets/tileset_forest.png" id="1_blxbr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l77d7"]
+size = Vector2(26, 6)
+
+[node name="AnimatableBody2D" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(13, 4)
+scale = Vector2(0.566531, 0.5)
+texture = ExtResource("1_blxbr")
+region_enabled = true
+region_rect = Rect2(128.819, 48.159, 46.2014, 13.7011)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+physics_interpolation_mode = 1
+position = Vector2(13, 4)
+shape = SubResource("RectangleShape2D_l77d7")

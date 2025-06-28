@@ -1,0 +1,77 @@
+[gd_scene load_steps=10 format=3 uid="uid://3rf8nuqlw4do"]
+
+[ext_resource type="Script" uid="uid://hrpremfqjrpv" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://cq2hox8eriujg" path="res://assets/Characters/Kid/moleque_perigo.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://cjpv6ifw4lroj" path="res://assets/Characters/Kid/KidRun.png" id="3_dqkch"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qhqgy"]
+atlas = ExtResource("3_dqkch")
+region = Rect2(0, 0, 66, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("3_dqkch")
+region = Rect2(132, 0, 66, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("3_dqkch")
+region = Rect2(198, 0, 66, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("3_dqkch")
+region = Rect2(66, 0, 66, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g2els"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qhqgy")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qhqgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqkch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tuyoq")
+}],
+"loop": true,
+"name": &"run",
+"speed": 8.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_u8vuu"]
+radius = 3.0
+height = 10.6667
+
+[node name="kid" type="CharacterBody2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_g2els")
+
+[node name="personagem" type="AnimatedSprite2D" parent="."]
+position = Vector2(1.33333, -12)
+scale = Vector2(0.453125, 0.390625)
+sprite_frames = SubResource("SpriteFrames_g2els")
+animation = &"run"
+autoplay = "idle"
+frame_progress = 0.792751
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5.33333)
+shape = SubResource("CapsuleShape2D_u8vuu")
+
+[node name="JumpBufferTimer" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="CoyoteTime" type="Timer" parent="."]
+wait_time = 0.2
+one_shot = true
