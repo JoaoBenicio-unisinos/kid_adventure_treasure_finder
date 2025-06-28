@@ -34,7 +34,7 @@ func _physics_process(delta: float) -> void:
 		dashing = false
 	# Handle jump.
 	if not is_on_floor() and velocity.y < 0:  # If the character is jumping
-			personagem.play("idle")  # Play jump animation if not already playing
+			personagem.play("jump")  # Play jump animation if not already playing
 	
 	if Input.is_action_just_pressed("ui_accept"):
 		if is_on_floor() || can_coyote_jump:
@@ -77,7 +77,7 @@ func _physics_process(delta: float) -> void:
 			personagem.stop() 
 			
 	if not is_on_floor() and velocity.y < 0:
-			personagem.play("idle")  # Play jump 
+			personagem.play("jump")  # Play jump 
 	
 	if Input.is_action_just_pressed("dash") and is_on_floor() and can_dash :
 		dashing = true

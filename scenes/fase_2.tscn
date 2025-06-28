@@ -26444,7 +26444,7 @@ tile_map_data = PackedByteArray("AAAAACIAAQAJAAIAAAAAACMAAQACAAEAAAABACIAAQADAAA
 tile_set = SubResource("TileSet_2ix5h")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("11_0o8to")]
-position = Vector2(63, 289)
+position = Vector2(65, 559)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(1, 0)
@@ -26548,7 +26548,7 @@ position = Vector2(128, 255)
 position = Vector2(991, 406)
 
 [node name="Frog" parent="Node" instance=ExtResource("17_oywbf")]
-position = Vector2(37, 280)
+position = Vector2(37, 279)
 
 [node name="BGMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_eabhh")

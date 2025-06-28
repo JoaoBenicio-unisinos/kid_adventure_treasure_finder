@@ -2608,7 +2608,7 @@ position = Vector2(409, -320)
 position = Vector2(433, -320)
 
 [node name="Baú" parent="Plataformas" instance=ExtResource("16_6gmwj")]
-position = Vector2(436, -319)
+position = Vector2(436, -317)
 
 [node name="AnimatableBody2D25" parent="Plataformas" instance=ExtResource("15_0nh8a")]
 position = Vector2(-397, -256)
