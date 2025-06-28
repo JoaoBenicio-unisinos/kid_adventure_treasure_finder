@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://bojd1bnsje8tl"]
+[gd_scene load_steps=39 format=4 uid="uid://bojd1bnsje8tl"]
 
 [ext_resource type="Texture2D" uid="uid://cglw6kcjm3p8j" path="res://assets/Background/orig_big.png" id="1_y30lw"]
 [ext_resource type="Texture2D" uid="uid://ly0aq0d38bhf" path="res://assets/Background/background 1/3.png" id="2_ch500"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://bhhy8v76erxj4" path="res://scenes/Coin.tscn" id="15_4y4ae"]
 [ext_resource type="PackedScene" uid="uid://bswqnskpca5qm" path="res://scenes/baú.tscn" id="16_oywbf"]
 [ext_resource type="PackedScene" uid="uid://s7ihme1t50do" path="res://scenes/Frog.tscn" id="17_oywbf"]
+[ext_resource type="PackedScene" uid="uid://snch8koubn27" path="res://scenes/portal.tscn" id="18_7ocig"]
 [ext_resource type="AudioStream" uid="uid://ds7d56kx5mqi7" path="res://assets/Sounds/xDeviruchi - The Icy Cave .wav" id="18_eabhh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jktqw"]
@@ -26444,7 +26445,7 @@ tile_map_data = PackedByteArray("AAAAACIAAQAJAAIAAAAAACMAAQACAAEAAAABACIAAQADAAA
 tile_set = SubResource("TileSet_2ix5h")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("11_0o8to")]
-position = Vector2(65, 559)
+position = Vector2(271, 557)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(1, 0)
@@ -26529,9 +26530,6 @@ position = Vector2(930, 220)
 [node name="Plataforma pequena10" parent="Node" instance=ExtResource("14_oax5d")]
 position = Vector2(1000, 254)
 
-[node name="Plataforma pequena11" parent="Node" instance=ExtResource("14_oax5d")]
-position = Vector2(898, 388)
-
 [node name="AnimatableBody2D14" parent="Node" instance=ExtResource("13_s1htv")]
 position = Vector2(986, 411)
 
@@ -26545,10 +26543,17 @@ position = Vector2(929, 192)
 position = Vector2(128, 255)
 
 [node name="Baú" parent="Node" instance=ExtResource("16_oywbf")]
-position = Vector2(991, 406)
+position = Vector2(994, 407)
 
 [node name="Frog" parent="Node" instance=ExtResource("17_oywbf")]
 position = Vector2(37, 279)
+
+[node name="Portal" parent="Node" instance=ExtResource("18_7ocig")]
+position = Vector2(1026, 389)
+nextScene = "res://scenes/fase_3.tscn"
+
+[node name="AnimatableBody2D15" parent="Node" instance=ExtResource("13_s1htv")]
+position = Vector2(1020, 411)
 
 [node name="BGMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_eabhh")

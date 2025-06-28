@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://db8x3a3wb6557"]
+
+[ext_resource type="Script" uid="uid://b7m5k1ikd0r4e" path="res://scenes/spikes.gd" id="1_xbcdo"]
+[ext_resource type="Texture2D" uid="uid://8c64nd4wy3ro" path="res://assets/Objetos/tile_set_aleatorio.png" id="2_bflj7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kd5gq"]
+size = Vector2(15, 39)
+
+[node name="Spikes" type="Area2D"]
+collision_layer = 3
+script = ExtResource("1_xbcdo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 4.71239
+texture = ExtResource("2_bflj7")
+region_enabled = true
+region_rect = Rect2(55.3741, 0, 40.8676, 15.8193)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2.5, -0.5)
+shape = SubResource("RectangleShape2D_kd5gq")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
