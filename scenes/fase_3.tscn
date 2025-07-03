@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=4 uid="uid://bwnjukn56wnfi"]
+[gd_scene load_steps=40 format=4 uid="uid://bwnjukn56wnfi"]
 
 [ext_resource type="Texture2D" uid="uid://6pcfbl58iri3" path="res://assets/Background/Cave/0.png" id="1_mirrl"]
 [ext_resource type="Texture2D" uid="uid://bigaaavf8w8k2" path="res://assets/Background/Cave/7.png" id="2_m34lk"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://snch8koubn27" path="res://scenes/portal.tscn" id="17_0078o"]
 [ext_resource type="AudioStream" uid="uid://caf3tuaigjmrb" path="res://assets/Sounds/xDeviruchi - Mysterious Dungeon.wav" id="17_f34hj"]
 [ext_resource type="PackedScene" uid="uid://db8x3a3wb6557" path="res://scenes/spikes.tscn" id="18_epox7"]
+[ext_resource type="PackedScene" uid="uid://cc4usfvbjx8ow" path="res://scenes/limite mundo.tscn" id="20_xdmg2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6svqm"]
 texture = ExtResource("1_mirrl")
@@ -1698,6 +1699,9 @@ texture = ExtResource("9_0fekv")
 physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_chf1w")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epox7"]
+size = Vector2(26, 1154)
+
 [node name="Fase 3" type="Node2D"]
 position = Vector2(-1, 1)
 
@@ -1747,6 +1751,9 @@ position = Vector2(51, 380)
 [node name="Camera2D" type="Camera2D" parent="kid"]
 position = Vector2(0, -13)
 zoom = Vector2(4, 4)
+limit_left = 0
+limit_top = 0
+limit_right = 1150
 
 [node name="Node" type="Node" parent="."]
 
@@ -1838,3 +1845,41 @@ position = Vector2(538, 250)
 [node name="BGSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_f34hj")
 autoplay = true
+
+[node name="Limites" type="Node" parent="."]
+
+[node name="Limite início" parent="Limites" instance=ExtResource("20_xdmg2")]
+position = Vector2(25.0002, 381)
+rotation = 1.59468
+
+[node name="Limite fim" parent="Limites" instance=ExtResource("20_xdmg2")]
+position = Vector2(1140, 345)
+rotation = -1.55102
+
+[node name="Area2D3" type="Area2D" parent="Limites"]
+position = Vector2(163, 92)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Area2D3"]
+position = Vector2(987, 229)
+shape = SubResource("RectangleShape2D_epox7")
+
+[node name="Area2D2" type="Area2D" parent="Limites"]
+position = Vector2(163, 92)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Area2D2"]
+position = Vector2(422, -87)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_epox7")
+
+[node name="Area2D" type="Area2D" parent="Limites"]
+position = Vector2(163, 92)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Area2D"]
+position = Vector2(-151, 264)
+shape = SubResource("RectangleShape2D_epox7")

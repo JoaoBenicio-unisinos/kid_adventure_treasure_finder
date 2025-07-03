@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://bojd1bnsje8tl"]
+[gd_scene load_steps=40 format=4 uid="uid://bojd1bnsje8tl"]
 
 [ext_resource type="Texture2D" uid="uid://cglw6kcjm3p8j" path="res://assets/Background/orig_big.png" id="1_y30lw"]
 [ext_resource type="Texture2D" uid="uid://ly0aq0d38bhf" path="res://assets/Background/background 1/3.png" id="2_ch500"]
@@ -26418,6 +26418,9 @@ texture = ExtResource("10_13edb")
 physics_layer_0/collision_layer = 1
 sources/1 = SubResource("TileSetAtlasSource_8hsww")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ocig"]
+size = Vector2(26, 1154)
+
 [node name="Fase 2" type="Node2D"]
 
 [node name="Céu" type="TileMapLayer" parent="."]
@@ -26445,11 +26448,15 @@ tile_map_data = PackedByteArray("AAAAACIAAQAJAAIAAAAAACMAAQACAAEAAAABACIAAQADAAA
 tile_set = SubResource("TileSet_2ix5h")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("11_0o8to")]
-position = Vector2(271, 557)
+position = Vector2(290, 554)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(1, 0)
 zoom = Vector2(4, 4)
+limit_left = 0
+limit_top = 0
+limit_right = 1150
+limit_bottom = 620
 
 [node name="Limites" type="Node" parent="."]
 
@@ -26460,6 +26467,34 @@ rotation = 1.59468
 [node name="Limite fim" parent="Limites" instance=ExtResource("14_8e7y0")]
 position = Vector2(1086, 527)
 rotation = -1.55102
+
+[node name="Area2D" type="Area2D" parent="Limites"]
+position = Vector2(163, 92)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Area2D"]
+position = Vector2(-151, 264)
+shape = SubResource("RectangleShape2D_7ocig")
+
+[node name="Area2D2" type="Area2D" parent="Limites"]
+position = Vector2(163, 92)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Area2D2"]
+position = Vector2(978, 267)
+shape = SubResource("RectangleShape2D_7ocig")
+
+[node name="Area2D3" type="Area2D" parent="Limites"]
+position = Vector2(163, 92)
+collision_layer = 3
+collision_mask = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Area2D3"]
+position = Vector2(417, -77)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_7ocig")
 
 [node name="Node" type="Node" parent="."]
 
