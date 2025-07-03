@@ -1,0 +1,94 @@
+[gd_scene load_steps=14 format=3 uid="uid://s7ihme1t50do"]
+
+[ext_resource type="Script" uid="uid://dt0pxpi7s7kgd" path="res://scripts/frog.gd" id="1_0tqiu"]
+[ext_resource type="Texture2D" uid="uid://qvfhct5dcdyt" path="res://assets/Frog/ToxicFrogGreenBrown_Idle.png" id="1_dri5l"]
+[ext_resource type="AudioStream" uid="uid://c1h0s5m7vuqeu" path="res://assets/Sounds/frog-croaking-sound-effect-322956 (mp3cut.net).mp3" id="3_yeema"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tqiu"]
+atlas = ExtResource("1_dri5l")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yeema"]
+atlas = ExtResource("1_dri5l")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsorh"]
+atlas = ExtResource("1_dri5l")
+region = Rect2(96, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bfjjf"]
+atlas = ExtResource("1_dri5l")
+region = Rect2(144, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxj7c"]
+atlas = ExtResource("1_dri5l")
+region = Rect2(192, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jnerp"]
+atlas = ExtResource("1_dri5l")
+region = Rect2(240, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5n5kr"]
+atlas = ExtResource("1_dri5l")
+region = Rect2(288, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdc8m"]
+atlas = ExtResource("1_dri5l")
+region = Rect2(336, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y4e2s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tqiu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yeema")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsorh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bfjjf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxj7c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jnerp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5n5kr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdc8m")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_yeema"]
+radius = 5.09902
+
+[node name="Frog" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_0tqiu")
+
+[node name="sprite" type="AnimatedSprite2D" parent="."]
+position = Vector2(10, 8)
+scale = Vector2(0.666667, 0.666667)
+sprite_frames = SubResource("SpriteFrames_y4e2s")
+autoplay = "default"
+frame = 7
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(9, 9)
+shape = SubResource("CircleShape2D_yeema")
+
+[node name="ribbit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_yeema")
+volume_db = 5.622
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

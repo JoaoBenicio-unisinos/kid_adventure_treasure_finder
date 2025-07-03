@@ -1,0 +1,134 @@
+[gd_scene load_steps=6 format=3 uid="uid://daqpnoalke04x"]
+
+[ext_resource type="Script" uid="uid://j3gesd27u18x" path="res://options.gd" id="1_se8ut"]
+[ext_resource type="FontFile" uid="uid://c66m8eqhagoyw" path="res://assets/Fonts_UI/m6x11plus.ttf" id="2_07a1d"]
+[ext_resource type="AudioStream" uid="uid://dxy64arumg7p3" path="res://assets/Efeitos/game-start-6104.mp3" id="2_se8ut"]
+[ext_resource type="FontFile" uid="uid://bjoonq74soe7h" path="res://assets/Fonts_UI/m6x11.ttf" id="4_p8250"]
+
+[sub_resource type="Theme" id="Theme_07a1d"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_se8ut")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Polygon2D" type="Polygon2D" parent="MarginContainer"]
+position = Vector2(790, 395)
+color = Color(0.996078, 0.698039, 0, 1)
+polygon = PackedVector2Array(-842.151, -418.134, 1196.74, -408.284, 1216.44, 744.135, -812.602, 714.586)
+uv = PackedVector2Array(-1259.32, -313.656, 2649.3, -374.815, 2654.51, 862.332, -1344.49, 724.436)
+
+[node name="Voltar" type="Button" parent="."]
+layout_mode = 2
+offset_left = 52.0
+offset_top = 901.0
+offset_right = 249.0
+offset_bottom = 984.0
+scale = Vector2(1.98788, 1.82851)
+theme = SubResource("Theme_07a1d")
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_07a1d")
+theme_override_font_sizes/font_size = 50
+button_mask = 7
+text = "Voltar"
+
+[node name="SoundEffect" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_se8ut")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+clip_contents = true
+layout_direction = 2
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.427778
+anchor_bottom = 0.422222
+offset_left = 380.0
+offset_top = -230.0
+offset_right = 746.0
+offset_bottom = -58.0
+grow_vertical = 2
+scale = Vector2(3.092, 3)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme_override_constants/separation = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="Resolution2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.988235, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_07a1d")
+theme_override_font_sizes/font_size = 35
+text = "Volume:"
+
+[node name="Volume" type="HSlider" parent="VBoxContainer"]
+layout_mode = 2
+rounded = true
+tick_count = 1
+
+[node name="Resolution" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0.988235, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_07a1d")
+theme_override_font_sizes/font_size = 35
+text = "Resolução:"
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_p8250")
+button_mask = 7
+keep_pressed_outside = true
+selected = 2
+fit_to_longest_item = false
+allow_reselect = true
+item_count = 4
+popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Maximizado"
+popup/item_1/id = 1
+popup/item_2/text = "Janela"
+popup/item_2/id = 2
+popup/item_3/text = "Minimizado"
+popup/item_3/id = 3
+
+[node name="Resolution2" type="Label" parent="."]
+layout_mode = 2
+offset_left = 1180.0
+offset_top = 248.0
+offset_right = 1546.0
+offset_bottom = 284.0
+scale = Vector2(3.57216, 3.11453)
+theme_override_colors/font_shadow_color = Color(0.988235, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_07a1d")
+theme_override_font_sizes/font_size = 33
+text = "Mute:"
+
+[node name="mute_check" type="CheckBox" parent="."]
+custom_minimum_size = Vector2(2, 2)
+layout_mode = 2
+offset_left = 1397.0
+offset_top = 256.0
+offset_right = 1763.0
+offset_bottom = 280.0
+scale = Vector2(5.11981, 4.94039)
+size_flags_stretch_ratio = 0.7
+button_mask = 7
+keep_pressed_outside = true
+
+[connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]
+[connection signal="value_changed" from="VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
+[connection signal="item_selected" from="VBoxContainer/OptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="toggled" from="mute_check" to="." method="_on_mute_check_toggled"]
