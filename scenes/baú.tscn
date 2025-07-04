@@ -1,6 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://bswqnskpca5qm"]
+[gd_scene load_steps=24 format=3 uid="uid://bswqnskpca5qm"]
 
 [ext_resource type="Texture2D" uid="uid://ddnkbk5di4nx6" path="res://assets/Objetos/Chests.png" id="1_rx75e"]
+[ext_resource type="Script" uid="uid://13wodufki272" path="res://scenes/baú.gd" id="1_uporv"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2wtqk"]
+atlas = ExtResource("1_rx75e")
+region = Rect2(0, 0, 48, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uporv"]
 atlas = ExtResource("1_rx75e")
@@ -26,8 +31,64 @@ region = Rect2(144, 36, 48, 36)
 atlas = ExtResource("1_rx75e")
 region = Rect2(192, 36, 48, 36)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_fsypr"]
+atlas = ExtResource("1_rx75e")
+region = Rect2(96, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ke2ln"]
+atlas = ExtResource("1_rx75e")
+region = Rect2(144, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlfla"]
+atlas = ExtResource("1_rx75e")
+region = Rect2(192, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vubnh"]
+atlas = ExtResource("1_rx75e")
+region = Rect2(96, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4drm5"]
+atlas = ExtResource("1_rx75e")
+region = Rect2(144, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_suqpd"]
+atlas = ExtResource("1_rx75e")
+region = Rect2(192, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvv5d"]
+atlas = ExtResource("1_rx75e")
+region = Rect2(96, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kv887"]
+atlas = ExtResource("1_rx75e")
+region = Rect2(144, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oih5x"]
+atlas = ExtResource("1_rx75e")
+region = Rect2(192, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdeph"]
+atlas = ExtResource("1_rx75e")
+region = Rect2(96, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxecj"]
+atlas = ExtResource("1_rx75e")
+region = Rect2(144, 32, 48, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwhqg"]
+atlas = ExtResource("1_rx75e")
+region = Rect2(192, 32, 48, 32)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_fsypr"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2wtqk")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_uporv")
@@ -46,23 +107,67 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_sil8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fsypr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ke2ln")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlfla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vubnh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4drm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_suqpd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvv5d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kv887")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oih5x")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdeph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxecj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwhqg")
 }],
 "loop": true,
-"name": &"new_animation",
+"name": &"abrir",
 "speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rx75e"]
 size = Vector2(16.75, 13)
 
-[node name="Baú" type="StaticBody2D"]
+[node name="Baú" type="Area2D"]
+collision_layer = 3
+script = ExtResource("1_uporv")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="abrir" type="AnimatedSprite2D" parent="."]
 position = Vector2(12.25, -11.25)
 scale = Vector2(0.65625, 0.652778)
 sprite_frames = SubResource("SpriteFrames_fsypr")
-animation = &"new_animation"
+animation = &"abrir"
+autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(6.625, -8.5)
 shape = SubResource("RectangleShape2D_rx75e")
+
+[node name="Timer" type="Timer" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

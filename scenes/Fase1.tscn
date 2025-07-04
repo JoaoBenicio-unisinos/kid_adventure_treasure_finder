@@ -12,13 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://c2rcv378lg07" path="res://assets/Background/background fase1/4.png" id="7_pumon"]
 [ext_resource type="Texture2D" uid="uid://c8qyqp4vhl686" path="res://assets/Background/background fase1.1/Plan 1.png" id="8_bgcsc"]
 [ext_resource type="Texture2D" uid="uid://c7hfot6privcf" path="res://assets/Background/nature_3/2.png" id="9_ctxon"]
-[ext_resource type="PackedScene" uid="uid://cc4usfvbjx8ow" path="res://scenes/limite mundo.tscn" id="9_opofi"]
-[ext_resource type="PackedScene" uid="uid://bhhy8v76erxj4" path="res://scenes/Coin.tscn" id="10_847xx"]
+[ext_resource type="PackedScene" uid="uid://cc4usfvbjx8ow" path="res://limite mundo.tscn" id="9_opofi"]
+[ext_resource type="PackedScene" uid="uid://bhhy8v76erxj4" path="res://Coin.tscn" id="10_847xx"]
 [ext_resource type="Texture2D" uid="uid://dklmxv8koqjod" path="res://assets/Background/Layers/4.png" id="10_ninsh"]
 [ext_resource type="Texture2D" uid="uid://bllaoa73c6ksn" path="res://assets/Background/Layers/5.png" id="11_ar0wc"]
 [ext_resource type="PackedScene" uid="uid://cn4kuxngsu5yf" path="res://scenes/Plataforma.tscn" id="11_bfo68"]
 [ext_resource type="PackedScene" uid="uid://bswqnskpca5qm" path="res://scenes/baú.tscn" id="11_ndch1"]
-[ext_resource type="PackedScene" uid="uid://s7ihme1t50do" path="res://scenes/Frog.tscn" id="13_nk8g7"]
+[ext_resource type="PackedScene" uid="uid://s7ihme1t50do" path="res://Frog.tscn" id="13_nk8g7"]
 [ext_resource type="PackedScene" uid="uid://snch8koubn27" path="res://scenes/portal.tscn" id="19_lgwl7"]
 [ext_resource type="AudioStream" uid="uid://brb0qnluj6vu1" path="res://assets/Sounds/xDeviruchi - And The Journey Begins .wav" id="22_7ygx7"]
 
@@ -7407,6 +7407,9 @@ position = Vector2(-606, -421)
 show_behind_parent = true
 position = Vector2(414, -334)
 
+[node name="Baú" parent="Coletaveis" instance=ExtResource("11_ndch1")]
+position = Vector2(380, -318)
+
 [node name="Plataformas" type="Node" parent="."]
 
 [node name="AnimatableBody2D" parent="Plataformas" instance=ExtResource("11_bfo68")]
@@ -7484,9 +7487,6 @@ position = Vector2(382, -320)
 
 [node name="AnimatableBody2D23" parent="Plataformas" instance=ExtResource("11_bfo68")]
 position = Vector2(404, -320)
-
-[node name="Baú" parent="Plataformas" instance=ExtResource("11_ndch1")]
-position = Vector2(379, -318)
 
 [node name="AnimatableBody2D24" parent="Plataformas" instance=ExtResource("11_bfo68")]
 position = Vector2(-495, -285)

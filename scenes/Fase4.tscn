@@ -5,13 +5,13 @@
 [ext_resource type="Texture2D" uid="uid://bmrbpefxnx14t" path="res://assets/Background/nature_4/3.png" id="4_dc014"]
 [ext_resource type="Texture2D" uid="uid://bu6ohs2jph0jr" path="res://assets/Background/nature_4/4.png" id="5_q61bs"]
 [ext_resource type="Texture2D" uid="uid://c42glyp7klbbw" path="res://assets/Tilesets/Tileset.png" id="6_msp3p"]
-[ext_resource type="PackedScene" uid="uid://s7ihme1t50do" path="res://scenes/Frog.tscn" id="11_28ica"]
+[ext_resource type="PackedScene" uid="uid://s7ihme1t50do" path="res://Frog.tscn" id="11_28ica"]
 [ext_resource type="AudioStream" uid="uid://brb0qnluj6vu1" path="res://assets/Sounds/xDeviruchi - And The Journey Begins .wav" id="12_28ica"]
 [ext_resource type="PackedScene" uid="uid://3rf8nuqlw4do" path="res://scenes/player.tscn" id="12_nckv8"]
-[ext_resource type="PackedScene" uid="uid://bhhy8v76erxj4" path="res://scenes/Coin.tscn" id="14_p0euo"]
+[ext_resource type="PackedScene" uid="uid://bhhy8v76erxj4" path="res://Coin.tscn" id="14_p0euo"]
 [ext_resource type="PackedScene" uid="uid://cn4kuxngsu5yf" path="res://scenes/Plataforma.tscn" id="15_0nh8a"]
 [ext_resource type="PackedScene" uid="uid://bswqnskpca5qm" path="res://scenes/baú.tscn" id="16_6gmwj"]
-[ext_resource type="PackedScene" uid="uid://cc4usfvbjx8ow" path="res://scenes/limite mundo.tscn" id="17_oukvo"]
+[ext_resource type="PackedScene" uid="uid://cc4usfvbjx8ow" path="res://limite mundo.tscn" id="17_oukvo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hblki"]
 texture = ExtResource("1_jvdwq")
