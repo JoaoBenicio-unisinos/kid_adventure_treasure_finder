@@ -3,9 +3,10 @@
 [ext_resource type="Script" uid="uid://j3gesd27u18x" path="res://options.gd" id="1_se8ut"]
 [ext_resource type="FontFile" uid="uid://c66m8eqhagoyw" path="res://assets/Fonts_UI/m6x11plus.ttf" id="2_07a1d"]
 [ext_resource type="AudioStream" uid="uid://dxy64arumg7p3" path="res://assets/Efeitos/game-start-6104.mp3" id="2_se8ut"]
-[ext_resource type="FontFile" uid="uid://bjoonq74soe7h" path="res://assets/Fonts_UI/m6x11.ttf" id="4_p8250"]
 
 [sub_resource type="Theme" id="Theme_07a1d"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ao2gm"]
 
 [node name="Options" type="Control"]
 layout_mode = 3
@@ -52,7 +53,7 @@ clip_contents = true
 layout_direction = 2
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.427778
+anchor_top = 0.422222
 anchor_bottom = 0.422222
 offset_left = 380.0
 offset_top = -230.0
@@ -88,7 +89,8 @@ text = "Resolução:"
 [node name="OptionButton" type="OptionButton" parent="VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("4_p8250")
+theme_override_fonts/font = ExtResource("2_07a1d")
+theme_override_font_sizes/font_size = 20
 button_mask = 7
 keep_pressed_outside = true
 selected = 2
@@ -115,6 +117,7 @@ theme_override_colors/font_shadow_color = Color(0.988235, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_07a1d")
 theme_override_font_sizes/font_size = 33
 text = "Mute:"
+justification_flags = 162
 
 [node name="mute_check" type="CheckBox" parent="."]
 custom_minimum_size = Vector2(2, 2)
@@ -125,8 +128,11 @@ offset_right = 1763.0
 offset_bottom = 280.0
 scale = Vector2(5.11981, 4.94039)
 size_flags_stretch_ratio = 0.7
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ao2gm")
+action_mode = 0
 button_mask = 7
 keep_pressed_outside = true
+flat = true
 
 [connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]
 [connection signal="value_changed" from="VBoxContainer/Volume" to="." method="_on_volume_value_changed"]
