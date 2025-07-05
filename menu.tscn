@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://d07joejv3y1sx" path="res://scripts/menu.gd" id="1_con2f"]
 [ext_resource type="Texture2D" uid="uid://urhusbgg51kt" path="res://assets/Background/BG1.png" id="2_g3eks"]
-[ext_resource type="Texture2D" uid="uid://duvdf1f11hxrx" path="res://assets/Characters/Kid/KidAdv.png" id="3_13sgg"]
+[ext_resource type="Texture2D" uid="uid://duvdf1f11hxrx" path="res://assets/KidAdv.png" id="3_13sgg"]
 [ext_resource type="Texture2D" uid="uid://c1qxybg43j2fm" path="res://assets/Characters/Kid/KidLogos.png" id="3_v86rl"]
 [ext_resource type="AudioStream" uid="uid://8w76i12rprw2" path="res://assets/Sounds/xDeviruchi - Title Theme .wav" id="4_mhnvy"]
 [ext_resource type="AudioStream" uid="uid://dxy64arumg7p3" path="res://assets/Efeitos/game-start-6104.mp3" id="5_4ytvr"]
