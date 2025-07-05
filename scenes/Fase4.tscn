@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://dpl5idxdh85af"]
+[gd_scene load_steps=27 format=4 uid="uid://dpl5idxdh85af"]
 
 [ext_resource type="Texture2D" uid="uid://b8k7bttybb8gl" path="res://assets/Background/nature_4/1.png" id="1_jvdwq"]
 [ext_resource type="Texture2D" uid="uid://bsg2jrmrhslbj" path="res://assets/Background/nature_4/2.png" id="2_28ica"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://s7ihme1t50do" path="res://Frog.tscn" id="11_28ica"]
 [ext_resource type="AudioStream" uid="uid://brb0qnluj6vu1" path="res://assets/Sounds/xDeviruchi - And The Journey Begins .wav" id="12_28ica"]
 [ext_resource type="PackedScene" uid="uid://3rf8nuqlw4do" path="res://scenes/player.tscn" id="12_nckv8"]
+[ext_resource type="PackedScene" uid="uid://3utpe0h61hm7" path="res://pause.tscn" id="13_u55o8"]
 [ext_resource type="PackedScene" uid="uid://bhhy8v76erxj4" path="res://Coin.tscn" id="14_p0euo"]
 [ext_resource type="PackedScene" uid="uid://cn4kuxngsu5yf" path="res://scenes/Plataforma.tscn" id="15_0nh8a"]
 [ext_resource type="PackedScene" uid="uid://bswqnskpca5qm" path="res://scenes/baú.tscn" id="16_6gmwj"]
@@ -2743,3 +2744,7 @@ shape = SubResource("RectangleShape2D_28ica")
 stream = ExtResource("12_28ica")
 autoplay = true
 playback_type = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("13_u55o8")]

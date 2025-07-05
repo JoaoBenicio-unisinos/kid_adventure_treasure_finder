@@ -31,59 +31,66 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 21.0
+offset_top = -6.0
+offset_right = 19.0
+offset_bottom = 13.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_con2f")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
-offset_right = 1151.0
-offset_bottom = 647.0
+offset_left = -12.0
+offset_top = 207.0
+offset_right = 1907.0
+offset_bottom = 1274.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_vsb4k")
 
 [node name="kidbau" type="TextureRect" parent="."]
-layout_mode = 0
-offset_left = 318.0
-offset_top = -3.0
-offset_right = 1159.0
-offset_bottom = 652.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_g3eks")
 expand_mode = 1
 metadata/_edit_lock_ = true
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-position = Vector2(56, 1)
-scale = Vector2(0.610205, 1)
+position = Vector2(51.3691, 1.66976)
+scale = Vector2(0.6143, 1.04105)
 color = Color(0.80312, 0, 0.160837, 1)
-polygon = PackedVector2Array(-9.38, -16.317, 656.16, -15.317, 944.16, 670, 5, 674)
+polygon = PackedVector2Array(-9.38, -16.317, 656.16, -15.317, 1130.77, 1080, -90.1336, 1054)
 
 [node name="Polygon2D3" type="Polygon2D" parent="."]
-position = Vector2(22, 1)
-scale = Vector2(0.610205, 1)
+position = Vector2(22, 1.38697)
+scale = Vector2(0.610205, 1.02372)
 color = Color(0, 0.027451, 0.901961, 1)
-polygon = PackedVector2Array(-9.38, -16.317, 656.16, -15.317, 944.16, 670, 5, 674)
+polygon = PackedVector2Array(-9.38, -16.317, 656.16, -15.317, 887.605, 614.51, 1073.41, 1097.58, -73.7457, 1104.42)
 
 [node name="Polygon2D2" type="Polygon2D" parent="."]
-position = Vector2(-10.131, -3)
-scale = Vector2(0.610205, 1)
+position = Vector2(-24.1371, 7.32931)
+scale = Vector2(0.62504, 1.63304)
 color = Color(0.996078, 0.698039, 0, 1)
-polygon = PackedVector2Array(-9.38, -16.317, 656.16, -15.317, 944.16, 670, 5, 674)
+polygon = PackedVector2Array(-9.38, -16.317, 656.16, -15.317, 958.558, 676.449, 448.191, 684.41, 5, 674)
 
 [node name="kidbau2" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -2.0
-offset_top = -4.0
-offset_right = 409.0
-offset_bottom = 251.0
+offset_left = -6.0
+offset_top = 26.0
+offset_right = 597.0
+offset_bottom = 496.0
 texture = ExtResource("3_13sgg")
 expand_mode = 1
 
 [node name="logo" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = 400.0
-offset_top = -94.0
-offset_right = 1211.0
-offset_bottom = 709.0
+offset_left = 525.0
+offset_top = -131.0
+offset_right = 1983.0
+offset_bottom = 1193.0
 texture = ExtResource("3_v86rl")
 expand_mode = 1
 
@@ -100,9 +107,9 @@ anchor_top = 0.484568
 anchor_right = 0.182292
 anchor_bottom = 1.0
 offset_left = 51.0
-offset_top = -67.0001
-offset_right = 145.0
-offset_bottom = -52.0
+offset_top = -66.5402
+offset_right = 145.364
+offset_bottom = -47.0
 grow_vertical = 2
 theme_override_constants/separation = 4
 alignment = 1
@@ -147,7 +154,7 @@ text = "Créditos"
 flat = true
 alignment = 0
 
-[node name="Quit" type="Button" parent="VBoxContainer"]
+[node name="quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 theme_type_variation = &"FlatButton"
 theme_override_colors/font_color = Color(0.361732, 0.168818, 0.148966, 1)
@@ -167,3 +174,4 @@ stream = ExtResource("5_4ytvr")
 [connection signal="pressed" from="VBoxContainer/start_button" to="." method="_on_start_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/options" to="." method="_on_options_pressed"]
 [connection signal="pressed" from="VBoxContainer/credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/quit" to="." method="_on_quit_pressed"]

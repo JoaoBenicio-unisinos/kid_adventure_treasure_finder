@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://bwnjukn56wnfi"]
+[gd_scene load_steps=41 format=4 uid="uid://bwnjukn56wnfi"]
 
 [ext_resource type="Texture2D" uid="uid://6pcfbl58iri3" path="res://assets/Background/Cave/0.png" id="1_mirrl"]
 [ext_resource type="Texture2D" uid="uid://bigaaavf8w8k2" path="res://assets/Background/Cave/7.png" id="2_m34lk"]
@@ -20,6 +20,7 @@
 [ext_resource type="AudioStream" uid="uid://caf3tuaigjmrb" path="res://assets/Sounds/xDeviruchi - Mysterious Dungeon.wav" id="17_f34hj"]
 [ext_resource type="PackedScene" uid="uid://db8x3a3wb6557" path="res://scenes/spikes.tscn" id="18_epox7"]
 [ext_resource type="PackedScene" uid="uid://cc4usfvbjx8ow" path="res://limite mundo.tscn" id="20_xdmg2"]
+[ext_resource type="PackedScene" uid="uid://3utpe0h61hm7" path="res://pause.tscn" id="21_0g1jv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6svqm"]
 texture = ExtResource("1_mirrl")
@@ -1883,3 +1884,7 @@ collision_mask = 3
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Limites/Area2D"]
 position = Vector2(-151, 264)
 shape = SubResource("RectangleShape2D_epox7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("21_0g1jv")]

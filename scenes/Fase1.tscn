@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=4 uid="uid://booresybequgc"]
+[gd_scene load_steps=57 format=4 uid="uid://booresybequgc"]
 
 [ext_resource type="Texture2D" uid="uid://da2mhj5cftscd" path="res://assets/Background/background fase1/1.png" id="1_lgwl7"]
 [ext_resource type="PackedScene" uid="uid://3rf8nuqlw4do" path="res://scenes/player.tscn" id="1_vlm2j"]
@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://bswqnskpca5qm" path="res://scenes/baú.tscn" id="11_ndch1"]
 [ext_resource type="PackedScene" uid="uid://s7ihme1t50do" path="res://Frog.tscn" id="13_nk8g7"]
 [ext_resource type="PackedScene" uid="uid://snch8koubn27" path="res://scenes/portal.tscn" id="19_lgwl7"]
+[ext_resource type="PackedScene" uid="uid://3utpe0h61hm7" path="res://pause.tscn" id="22_3us6f"]
 [ext_resource type="AudioStream" uid="uid://brb0qnluj6vu1" path="res://assets/Sounds/xDeviruchi - And The Journey Begins .wav" id="22_7ygx7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_geqgc"]
@@ -7520,3 +7521,7 @@ rotation = -1.55102
 position = Vector2(421, -324)
 stream = ExtResource("22_7ygx7")
 autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("22_3us6f")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://bojd1bnsje8tl"]
+[gd_scene load_steps=41 format=4 uid="uid://bojd1bnsje8tl"]
 
 [ext_resource type="Texture2D" uid="uid://cglw6kcjm3p8j" path="res://assets/Background/orig_big.png" id="1_y30lw"]
 [ext_resource type="Texture2D" uid="uid://ly0aq0d38bhf" path="res://assets/Background/background 1/3.png" id="2_ch500"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://s7ihme1t50do" path="res://Frog.tscn" id="17_oywbf"]
 [ext_resource type="PackedScene" uid="uid://snch8koubn27" path="res://scenes/portal.tscn" id="18_7ocig"]
 [ext_resource type="AudioStream" uid="uid://ds7d56kx5mqi7" path="res://assets/Sounds/xDeviruchi - The Icy Cave .wav" id="18_eabhh"]
+[ext_resource type="PackedScene" uid="uid://3utpe0h61hm7" path="res://pause.tscn" id="20_5j0m4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jktqw"]
 texture = ExtResource("1_y30lw")
@@ -26593,3 +26594,7 @@ position = Vector2(1020, 411)
 [node name="BGMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("18_eabhh")
 autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("20_5j0m4")]
