@@ -78,10 +78,10 @@ polygon = PackedVector2Array(-9.38, -16.317, 656.16, -15.317, 958.558, 676.449, 
 
 [node name="kidbau2" type="TextureRect" parent="."]
 layout_mode = 0
-offset_left = -6.0
-offset_top = 26.0
-offset_right = 597.0
-offset_bottom = 496.0
+offset_left = -1.0
+offset_top = 61.0
+offset_right = 602.0
+offset_bottom = 531.0
 texture = ExtResource("3_13sgg")
 expand_mode = 1
 

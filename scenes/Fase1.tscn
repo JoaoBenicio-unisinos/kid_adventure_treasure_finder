@@ -1,4 +1,4 @@
-[gd_scene load_steps=57 format=4 uid="uid://booresybequgc"]
+[gd_scene load_steps=58 format=4 uid="uid://booresybequgc"]
 
 [ext_resource type="Texture2D" uid="uid://da2mhj5cftscd" path="res://assets/Background/background fase1/1.png" id="1_lgwl7"]
 [ext_resource type="PackedScene" uid="uid://3rf8nuqlw4do" path="res://scenes/player.tscn" id="1_vlm2j"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cn4kuxngsu5yf" path="res://scenes/Plataforma.tscn" id="11_bfo68"]
 [ext_resource type="PackedScene" uid="uid://bswqnskpca5qm" path="res://scenes/baú.tscn" id="11_ndch1"]
 [ext_resource type="PackedScene" uid="uid://s7ihme1t50do" path="res://Frog.tscn" id="13_nk8g7"]
+[ext_resource type="PackedScene" uid="uid://bp2ak1q6p4ssc" path="res://chave.tscn" id="19_3us6f"]
 [ext_resource type="PackedScene" uid="uid://snch8koubn27" path="res://scenes/portal.tscn" id="19_lgwl7"]
 [ext_resource type="PackedScene" uid="uid://3utpe0h61hm7" path="res://pause.tscn" id="22_3us6f"]
 [ext_resource type="AudioStream" uid="uid://brb0qnluj6vu1" path="res://assets/Sounds/xDeviruchi - And The Journey Begins .wav" id="22_7ygx7"]
@@ -7368,6 +7369,7 @@ tile_set = SubResource("TileSet_qvha5")
 [node name="CharacterBody2D" parent="." instance=ExtResource("1_vlm2j")]
 z_index = 1
 position = Vector2(-388, -1)
+collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
 position = Vector2(0, -13)
@@ -7407,9 +7409,16 @@ position = Vector2(-606, -421)
 [node name="Portal" parent="Coletaveis" instance=ExtResource("19_lgwl7")]
 show_behind_parent = true
 position = Vector2(414, -334)
+collision_layer = 2
 
 [node name="Baú" parent="Coletaveis" instance=ExtResource("11_ndch1")]
 position = Vector2(380, -318)
+collision_layer = 2
+collision_mask = 3
+
+[node name="Chave" parent="Coletaveis" instance=ExtResource("19_3us6f")]
+position = Vector2(-296, -208)
+collision_mask = 3
 
 [node name="Plataformas" type="Node" parent="."]
 

@@ -13,11 +13,12 @@ config_version=5
 config/name="Kid Adventure Treasure Finder"
 run/main_scene="uid://bh03k52jkgde7"
 config/features=PackedStringArray("4.4", "GL Compatibility")
+config/icon="uid://duvdf1f11hxrx"
 
 [autoload]
 
 SceneTransition="*res://scenes/SceneTransition.tscn"
-Globais="*res://globais.gd"
+Global="*res://scripts/global.gd"
 
 [display]
 

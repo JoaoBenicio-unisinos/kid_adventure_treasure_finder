@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://bwnjukn56wnfi"]
+[gd_scene load_steps=42 format=4 uid="uid://bwnjukn56wnfi"]
 
 [ext_resource type="Texture2D" uid="uid://6pcfbl58iri3" path="res://assets/Background/Cave/0.png" id="1_mirrl"]
 [ext_resource type="Texture2D" uid="uid://bigaaavf8w8k2" path="res://assets/Background/Cave/7.png" id="2_m34lk"]
@@ -19,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://snch8koubn27" path="res://scenes/portal.tscn" id="17_0078o"]
 [ext_resource type="AudioStream" uid="uid://caf3tuaigjmrb" path="res://assets/Sounds/xDeviruchi - Mysterious Dungeon.wav" id="17_f34hj"]
 [ext_resource type="PackedScene" uid="uid://db8x3a3wb6557" path="res://scenes/spikes.tscn" id="18_epox7"]
+[ext_resource type="PackedScene" uid="uid://bp2ak1q6p4ssc" path="res://chave.tscn" id="19_2l8p5"]
 [ext_resource type="PackedScene" uid="uid://cc4usfvbjx8ow" path="res://limite mundo.tscn" id="20_xdmg2"]
 [ext_resource type="PackedScene" uid="uid://3utpe0h61hm7" path="res://pause.tscn" id="21_0g1jv"]
 
@@ -1842,6 +1843,10 @@ nextScene = "res://scenes/Fase4.tscn"
 
 [node name="Spikes" parent="Node" instance=ExtResource("18_epox7")]
 position = Vector2(538, 250)
+
+[node name="Chave" parent="Node" instance=ExtResource("19_2l8p5")]
+position = Vector2(740, 166)
+collision_mask = 3
 
 [node name="BGSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("17_f34hj")
